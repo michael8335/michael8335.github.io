@@ -1,5 +1,12 @@
-<body>
-大家好，本人杨飞，此处为本人博客<br>
-email:yangf.sky@gmail.com
+---
+　　layout: default
+　　title: 欢迎光临我的Blog
+　　---
+　　<h2>{{ page.title }}</h2>
+　　<p>最新文章</p>
+　　<ul>
+　　　　{% for post in site.posts %}
+　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}
+　　</ul>
 
-</body>
